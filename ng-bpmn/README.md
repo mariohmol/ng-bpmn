@@ -95,9 +95,6 @@ then your app.component.html
 
 TODO: 
 
-## Development
-
-* npm i @angular/compiler tsickle typescript@3.1.6 -g
 
 ## Thanks
 

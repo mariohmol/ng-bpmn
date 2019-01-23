@@ -1,0 +1,30 @@
+{
+  "name": "ng-bpmn",
+  "version": "2.0.9",
+  "license": "MIT",
+  "homepage": "https://github.com/jsBpmnImproved/ng-bpmn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsBpmnImproved/ng-bpmn.git"
+  },
+  "author": "Mario Mol <mariohmol@gmail.com>",
+  "keywords": [
+    "angular",
+    "jsbpmn",
+    "ng-bpmn",
+    "bpmn"
+  ],
+  "peerDependencies": {
+    "@angular/core": ">=6.0.0-rc.5",
+    "@angular/common": ">=6.0.0-rc.5",
+    "bpmn-js": "^2.0.4"
+  },
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "workingDirectory": "../.ng_build",
+    "lib": {
+      "entryFile": "src/public_api.ts"
+    },
+    "dest": "../dist/ng-bpmn"
+  }
+}
