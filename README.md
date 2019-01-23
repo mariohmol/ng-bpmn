@@ -8,7 +8,7 @@ This package wraps the bpmn module for Angular.
 
 Demo project in Stackblitz [DEMO](https://stackblitz.com/edit/ng-bpmn-demo)
 
-Demo src [Demo](https://github.com/mariohmol/ng-bpmn-demo)
+Demo src [Demo](https://github.com/mariohmol/ng-bpmn/src/app/demo)
 
 This package support Angular 6, see please demo src.
 
@@ -19,18 +19,18 @@ Install via [npm](http://npmjs.com) :
 
 ```bash
 npm install ng-bpmn
-npm install bpmn@3.6.1
+npm install bpmn-js@3.1.0
 ```
 
-Then include the `BpmnModule` module in your module.
+Then include the `NgBpmnEditorModule` module in your module.
 
 ```typescript
-import { BpmnModule } from 'ng-bpmn';
+import { NgBpmnEditorModule } from 'ng-bpmn';
 
 @NgModule({
   imports: [
     BrowserModule,
-    BpmnModule,
+    NgBpmnEditorModule,
     ...
   ]
   ...
@@ -52,11 +52,11 @@ Or you can add this in your SCSS pipe
 @import "~bpmn-js/dist/assets/bpmn-font/css/bpmn.css";
 ```
 
-Import DiagramComponent in your component :
+Import BpmnEditorComponent in your component :
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DiagramComponent } from 'ng-bpmn';
+import { BpmnEditorComponent } from 'ng-bpmn';
 import { Options } from 'bpmn';
 
 @Component({
@@ -65,19 +65,9 @@ import { Options } from 'bpmn';
 })
 export class AppComponent implements OnInit {
   options: Options;
-  @ViewChild(DiagramComponent) ucDiagram: DiagramComponent;
+  @ViewChild(BpmnEditorComponent) ucDiagram: BpmnEditorComponent;
   constructor() {}
   ngOnInit() {
-     this.options = {
-        editable: true,
-        eventLimit: false,
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay,listMonth'
-        },
-        events: data
-      };
   }
 
 }
@@ -86,8 +76,7 @@ then your app.component.html
 
 ```html
 <div *ngIf="options">
-    <ng-bpmn #ucDiagram [options]="options" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
-        (eventResize)="updateEvent($event.detail)" (clickButton)="clickButton($event.detail)"></ng-bpmn>
+    <ng-bpmn #ucDiagram type="modeler"></ng-bpmn>
 </div>
 ```
 
