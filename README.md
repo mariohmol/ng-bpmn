@@ -6,7 +6,7 @@ This package wraps the bpmn module for Angular.
 [![latest](https://img.shields.io/npm/v/ng-bpmn/latest.svg)](http://www.npmjs.com/package/ng-bpmn) 
 [![Npm Downloads](https://img.shields.io/npm/dt/ng-bpmn.svg?maxAge=2592000)](https://www.npmjs.com/package/ng-bpmn)
 
-Demo project in Stackblitz [DEMO](https://stackblitz.com/edit/ng-bpmn-demo)
+Demo project in Stackblitz [DEMO](https://stackblitz.com/edit/ng-bpmn)
 
 Demo src [Demo](https://github.com/mariohmol/ng-bpmn/src/app/demo)
 
