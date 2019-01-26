@@ -25,8 +25,8 @@ import { Subscription, Observable } from 'rxjs';
  */
 import BpmnJS from 'bpmn-js/lib/NavigatedViewer.js';
 import BpmnViewerJS from 'bpmn-js/lib/Viewer.js';
-// import BpmnModelerJS from 'bpmn-js/lib/Modeler.js';
-import BpmnModelerJS from 'bpmn-js/dist/bpmn-modeler.production.min.js';
+import BpmnModelerJS from 'bpmn-js/lib/Modeler.js';
+// import BpmnModelerJS from 'bpmn-js/dist/bpmn-modeler.production.min.js';
 // import BpmnJS from 'bpmn-js';
 
 import { importDiagram } from './lib';
@@ -47,7 +47,7 @@ import { importDiagram } from './lib';
   ]
 })
 export class BpmnEditorComponent implements AfterContentInit, OnChanges, OnDestroy, OnInit {
-  private bpmnJS: any; // BpmnJS
+  public bpmnJS: any; // BpmnJS
 
   @ViewChild('ref') public el: ElementRef;
   @Output() private importDone: EventEmitter<any> = new EventEmitter();
