@@ -9,7 +9,6 @@ export const importDiagram = (bpmnJS: any) => <Object>(source: Observable<string
 
     const subscription = source.subscribe({
       next(xml: string) {
-
         // canceling the subscription as we are interested
         // in the first diagram to display only
         subscription.unsubscribe();
@@ -26,7 +25,7 @@ export const importDiagram = (bpmnJS: any) => <Object>(source: Observable<string
         });
       },
       error(e) {
-        console.log('ERROR');
+        console.log('ERROR:', e);
         observer.error(e);
       },
       complete() {
