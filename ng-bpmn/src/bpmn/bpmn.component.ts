@@ -11,7 +11,7 @@ import {
   EventEmitter,
   OnInit
 } from '@angular/core';
-
+import * as X2JS from 'x2js';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { Subscription, Observable } from 'rxjs';
@@ -106,7 +106,7 @@ export class BpmnEditorComponent implements AfterContentInit, OnChanges, OnDestr
   }
 
   loadXml(xml) {
-    this.bpmnJS.importXML(xml,  (err: any, warnings: any) => {
+    this.bpmnJS.importXML(xml, (err: any, warnings: any) => {
       if (err) {
         this.importDone.emit({
           type: 'error',
@@ -120,5 +120,27 @@ export class BpmnEditorComponent implements AfterContentInit, OnChanges, OnDestr
       }
     });
   }
+
+  getJson() {
+    return new Promise((resolve, reject) => {
+      this.bpmnJS.saveXML((err, xml) => {
+        if (err) {
+          return reject(err);
+        }
+        const x2js = new X2JS();
+        const json = x2js.xml2js(xml);
+        resolve(json);
+      });
+    });
+  }
+
+  loadJson(json) {
+    const x2js = new X2JS();
+    const xml = x2js.js2xml(json);
+    this.loadXml(xml);
+    return xml;
+  }
+
+
 
 }

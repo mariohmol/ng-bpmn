@@ -34,18 +34,14 @@ export class DemoComponent implements OnInit {
   }
 
   exportJson() {
-    this.ucBpmn.bpmnJS.saveXML((err, xml) => {
-      this.xml = xml;
-      const x2js = new X2JS();
-      this.json = x2js.xml2js(xml);
-      console.log(this.json)
-    });
+    this.ucBpmn.getJson().then(json => {
+      console.log(json);
+      this.json = json;
+    })
   }
 
   readJson() {
-    const x2js = new X2JS();
-    const xml = x2js.js2xml(this.json);
+    const xml = this.ucBpmn.loadJson(this.json)
     console.log(xml);
-    this.ucBpmn.loadXml(xml);
   }
 }
