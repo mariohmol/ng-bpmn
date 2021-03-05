@@ -28,7 +28,7 @@
     "@angular/platform-browser-dynamic": "^7.1.0",
     "@angular/router": "7.1.0",
     "bpmn-js": "^3.1.0",
-    "core-js": "^2.4.1",
+    "core-js": "^2.6.12",
     "events": "^3.0.0",
     "node-sass": "^4.11.0",
     "rxjs": "^6.0.0-beta.1",
