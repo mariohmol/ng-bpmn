@@ -8897,11 +8897,12 @@ ws@~3.3.1:
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
 
-x2js@^3.2.6:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/x2js/-/x2js-3.3.1.tgz#185d0cb19511d150f38db87d02da7e34b07aa49e"
+x2js@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/x2js/-/x2js-3.4.1.tgz#9e2f2b9d4181ed504a5907110dc360e9829d1cee"
+  integrity sha512-RCMEmHNsyeyzF5NyGHbmCCZU9N8uMiz9FluAj3CpfVREHpgm3JB9Wr/dEWdPqGHmK3lRd2fm0ccOWtuJ2YUowQ==
   dependencies:
-    xmldom "^0.1.19"
+    xmldom "^0.5.0"
 
 xdg-basedir@^3.0.0:
   version "3.0.0"
@@ -8918,9 +8919,10 @@ xmlbuilder@~9.0.1:
   version "9.0.4"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.4.tgz#519cb4ca686d005a8420d3496f3f0caeecca580f"
 
-xmldom@^0.1.19:
-  version "0.1.27"
-  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.1.27.tgz#d501f97b3bdb403af8ef9ecc20573187aadac0e9"
+xmldom@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.5.0.tgz#193cb96b84aa3486127ea6272c4596354cb4962e"
+  integrity sha512-Foaj5FXVzgn7xFzsKeNIde9g6aFBxTPi37iwsno8QvApmtg7KYrr+OPyRHcJF7dud2a5nGRBXK3n0dL62Gf7PA==
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.4"

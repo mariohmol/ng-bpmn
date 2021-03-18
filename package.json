@@ -33,7 +33,7 @@
     "node-sass": "^4.11.0",
     "rxjs": "^6.0.0-beta.1",
     "webpack": "^4.16.1",
-    "x2js": "^3.2.6",
+    "x2js": "^3.4.1",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
